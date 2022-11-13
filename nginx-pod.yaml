@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-atividade
+spec:
+  containers:
+  - name: nginx-por-atividade
+    image: nginx:latest
+    resources:
+      limits:
+        memory: "400mi"
+        cpu: "1"
+    ports:
+      - containerPort: 80

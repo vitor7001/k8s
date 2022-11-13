@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-pod-atividade
+  labels:
+    app: tagMysql
+spec:
+  containers:
+  - name: nginx-por-atividade
+    image: mysql:latest
+    resources:
+      limits:
+        memory: "400mi"
+        cpu: "1"
+    ports:
+      - containerPort: 3306
